@@ -17,4 +17,12 @@ jobs:
         run: |
           import platform
           print(platform.processor())
+  run-on-windows: 
+    runs-on: windows-latest
+    steps:
+      - name: Powershell Commands
+        run: pwd
+      - name: running on Bash
+        run: pwd
+        shell: bash
         
