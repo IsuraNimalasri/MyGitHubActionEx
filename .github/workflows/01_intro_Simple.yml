@@ -1,0 +1,28 @@
+name: Shell Commands
+
+on: []
+
+jobs:
+  run-shell-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo-string
+        run: echo "Hello Actions"
+      - name: multiline-scripts
+        run: |
+          node -v
+          npm -v
+      - name: python-command
+        shell: python
+        run: |
+          import platform
+          print(platform.processor())
+  run-on-windows: 
+    runs-on: windows-latest
+    steps:
+      - name: Powershell Commands
+        run: pwd
+      - name: running on Bash
+        run: pwd
+        shell: bash
+        
