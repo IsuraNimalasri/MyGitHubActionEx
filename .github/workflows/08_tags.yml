@@ -4,14 +4,14 @@ on:
   push:
     branches:
       - main
-      - 'events-*'
-      - 'events-**'
+      # - 'events-*'
+      # - 'events-**'
     # branches-ignore:
       # - null
-    tags:
-      - "v1"
-    paths:
-      - '**.py'
+    # tags:
+    #   - "v1"
+    # paths:
+    #   - '**.py'
     
 jobs:
   run-shell-commands:
