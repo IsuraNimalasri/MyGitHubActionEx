@@ -1,0 +1,19 @@
+name: 04 Github Cheeckouts
+
+on: [push]
+
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List Files
+        run: |
+          pwd
+          ls -1
+      - name: Cheeckouts
+        uses: actions/checkout@v2
+        
+
+
+
+
