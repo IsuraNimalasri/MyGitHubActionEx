@@ -1,6 +1,6 @@
 name: 04 Github Cheeckouts
 
-on: [push]
+on: []
 
 jobs:
   run-github-actions:

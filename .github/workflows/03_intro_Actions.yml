@@ -1,6 +1,6 @@
 name: Github Actions
 
-on: [pull_request]
+on: []
 
 jobs:
   run-github-actions:

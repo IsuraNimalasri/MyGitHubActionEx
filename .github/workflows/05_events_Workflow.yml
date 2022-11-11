@@ -1,8 +1,9 @@
 # The list of Trigger events https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
 name: 05 Events
 
-on: [pull_request]
-
+on:
+  pull_request:
+    types: [ opened, reopened]
 jobs:
   run-github-actions:
     runs-on: ubuntu-latest
