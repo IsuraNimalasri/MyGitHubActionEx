@@ -1,0 +1,21 @@
+name: 06 Schedules
+
+on:
+  # schedule:
+  #   - cron: "1 * * * *"
+  pull_request:
+    types: [ opened, reopened]
+  
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List Files
+        run: |
+          pwd
+          ls -1
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_RUN_ID
+      - name: Cheeckouts
+        uses: actions/checkout@v2

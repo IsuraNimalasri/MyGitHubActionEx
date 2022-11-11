@@ -1,0 +1,30 @@
+name: 08 Tags
+
+on: 
+  push:
+    branches:
+      - main
+      - 'events-*'
+      - 'events-**'
+    # branches-ignore:
+      # - null
+    tags:
+      - "v1"
+    paths:
+      - '**.py'
+    
+jobs:
+  run-shell-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo-string
+        run: echo "Hello Actions"
+      - name: multiline-scripts
+        run: |
+          node -v
+          npm -v
+      - name: python-command
+        shell: python
+        run: |
+          import platform
+          print(platform.processor())
