@@ -8,8 +8,8 @@ on:
       # - 'events-**'
     # branches-ignore:
       # - null
-    # tags:
-    #   - "v1"
+    tags:
+      - "v1"
     # paths:
     #   - '**.py'
     
